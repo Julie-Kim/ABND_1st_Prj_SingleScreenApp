@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/logo_height"
+        android:background="@color/logo_background"
+        android:padding="@dimen/logo_image_padding"
+        android:src="@drawable/coffee"
+        android:tint="@color/logo_image_tint"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/the_brown_photo_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/brunch_food" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_background"
+            android:gravity="center"
+            android:padding="@dimen/title_padding"
+            android:text="@string/the_brown"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/content_background"
+        android:orientation="vertical"
+        android:padding="@dimen/title_padding">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sub_text_padding">
+
+            <TextView
+                android:id="@+id/address_title"
+                style="@style/SubTitleStyle"
+                android:drawableStart="@drawable/location_icon"
+                android:text="@string/address" />
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/SubContentStyle"
+                android:layout_toEndOf="@id/address_title"
+                android:autoLink="map"
+                android:text="@string/the_brown_address" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sub_text_padding">
+
+            <TextView
+                android:id="@+id/phone_title"
+                style="@style/SubTitleStyle"
+                android:drawableStart="@drawable/phone_icon"
+                android:text="@string/phone_number" />
+
+            <TextView
+                android:id="@+id/phone"
+                style="@style/SubContentStyle"
+                android:layout_toEndOf="@id/phone_title"
+                android:autoLink="phone"
+                android:text="@string/the_brown_phone_number" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sub_text_padding">
+
+            <TextView
+                android:id="@+id/business_hour_title"
+                style="@style/SubTitleStyle"
+                android:drawableStart="@drawable/clock_icon"
+                android:text="@string/business_hours" />
+
+            <TextView
+                android:id="@+id/business_hour"
+                style="@style/SubContentStyle"
+                android:layout_toEndOf="@id/business_hour_title"
+                android:text="@string/the_brown_business_hours" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/sub_text_padding"
+            android:layout_marginBottom="@dimen/sub_text_padding"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/the_brown_description"
+            android:textColor="@color/description_text_color" />
+
+    </LinearLayout>
+
+</LinearLayout>
